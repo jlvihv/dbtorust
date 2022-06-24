@@ -14,7 +14,7 @@ go install github.com/jlvihv/dbtorust@latest
 
 使用前，必须在 config.toml 配置文件中配置数据库连接信息：
 
-默认情况下，程序会读取 `~/.config/dbtogo/config.toml` 处的配置文件
+默认情况下，程序会读取 `~/.config/dbtorust/config.toml` 处的配置文件
 
 可以使用 --config 选项自定义配置文件位置
 
@@ -40,32 +40,32 @@ charset = "utf8mb4"
 
 输出到命令行
 ```bash
-dbtogo --db 数据库名 --table 表名
+dbtorust --db 数据库名 --table 表名
 ```
 
 输出到系统剪贴板
 ```bash
-dbtogo --db 数据库名 --table 表名 --clip
+dbtorust --db 数据库名 --table 表名 --clip
 ```
 
 输出到文件
 ```bash
-dbtogo --db 数据库名 --table 表名 --file struct.txt
+dbtorust --db 数据库名 --table 表名 --file struct.txt
 ```
 
 可以同时指定多个表名，用逗号隔开，不要加空格
 ```bash
-dbtogo --db 数据库名 --table 表名1,表名2
+dbtorust --db 数据库名 --table 表名1,表名2
 ```
 
 如果一定想在多个表名之间加空格，那就把它们放在一对引号里
 ```bash
-dbtogo --db 数据库名 --table "表名1, 表名2"
+dbtorust --db 数据库名 --table "表名1, 表名2"
 ```
 
 指定配置文件位置
 ```bash
-dbtogo --db 数据库名 --table 表名 --config ~/dbtogo.toml
+dbtorust --db 数据库名 --table 表名 --config ~/dbtorust.toml
 ```
 
 更多信息，使用 -h 选项查看

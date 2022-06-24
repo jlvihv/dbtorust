@@ -18,7 +18,7 @@ var (
 
 var rootCmd = &cobra.Command{
 	Use:   "dbtogo",
-	Short: "将数据库中的表转换为 go 结构体",
+	Short: "将数据库中的表转换为 rust 结构体",
 	Run: func(_ *cobra.Command, _ []string) {
 		run()
 	},

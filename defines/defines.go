@@ -1,8 +1,8 @@
 package defines
 
 var StructTemplateText = map[string]string{
-	"title": "pub struct STRUCT_NAME {",
-	"line": "	pub	FIELD_NAME	:	FIELD_TYPE,",
+	"title": "#[derive(Debug, sqlx::FromRow)]\npub struct STRUCT_NAME {",
+	"line": "	pub FIELD_NAME: FIELD_TYPE,",
 	"end": "}",
 }
 

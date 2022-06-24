@@ -19,7 +19,7 @@ var (
 func GetConfig() *defines.Config {
 	once.Do(func() {
 		if configPath == "" {
-			configPath = "~/.config/dbtogo/config.toml"
+			configPath = "~/.config/dbtorust/config.toml"
 		}
 		absConfigPath, err := homedir.Expand(configPath)
 		if err != nil {
